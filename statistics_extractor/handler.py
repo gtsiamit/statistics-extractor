@@ -18,16 +18,18 @@ from typing import Union
 
 STATISTICS_NAMES = [
     "mean",
-    "median" "mode",
+    "median",
+    "mode",
     "variance",
     "standard_deviation",
-    "percentile",
+    "25th_percentile",
+    "75th_percentile",
     "skewness",
     "kurtosis",
 ]
 
 
-def get_statistics(x: np.ndarray) -> Union[np.float64, np.int64, np.ndarray]:
+def get_statistics(x: np.ndarray) -> list[Union[np.float64, np.int64, np.ndarray]]:
     """
     Computes multiple statistical measures for a given NumPy array.
 
@@ -93,7 +95,7 @@ def find_number_of_columns(data: np.ndarray) -> int:
         int: The number of columns if the array is 2D. Otherwise, returns 1.
     """
 
-    return data[0].shape[1] if isinstance(data[0], np.ndarray) else 1
+    return data[0].shape[0] if isinstance(data[0], np.ndarray) else 1
 
 
 def convert_output_to_df(list_output: list, cols: list = None) -> pd.DataFrame:
@@ -145,7 +147,7 @@ def handle_extraction(
         or isinstance(x, pd.DataFrame)
     ):
         raise ValueError(
-            f"Expected a NumPy array, a Pandas Series or a Pandas DataFrame but got {type(x).__name__}"
+            f"Expected a NumPy array, a Pandas Series or a Pandas DataFrame but got {type(x).__name__}."
         )
         sys.exit(1)
 
