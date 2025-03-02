@@ -87,7 +87,8 @@ def calculate_mode(x: np.array) -> Union[np.float64, np.int64, np.array]:
             - If `x` is 2D, returns a 1D NumPy array (`np.ndarray`) containing the mode of each column.
     """
 
-    return calculate_statistic(x=x, stat_func=STAT_FUNC.get("mode"))
+    mode_result = calculate_statistic(x=x, stat_func=STAT_FUNC.get("mode"))
+    return mode_result.mode
 
 
 def calculate_variance(x: np.array) -> Union[np.float64, np.int64, np.array]:
