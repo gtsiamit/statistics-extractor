@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.stats import mode, skew, kurtosis
 from typing import Union, Callable
-from utils import is_1d_array, is_2d_array
+from .utils import is_1d_array, is_2d_array
 
 
 STAT_FUNC = {

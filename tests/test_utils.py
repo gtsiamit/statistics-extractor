@@ -1,11 +1,6 @@
-import sys
-from pathlib import Path
 import numpy as np
 import pandas as pd
-
-sys.path.append(str(Path(__file__).parent.parent / "statistics_extractor"))
-
-from utils import is_1d_array, is_2d_array, pd_to_np
+from statistics_extractor.utils import is_1d_array, is_2d_array, pd_to_np
 
 
 # Test is_1d_array

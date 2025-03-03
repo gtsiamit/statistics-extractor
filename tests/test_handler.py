@@ -1,12 +1,7 @@
-import sys
-from pathlib import Path
 import numpy as np
 import pandas as pd
 import pytest
-
-sys.path.append(str(Path(__file__).parent.parent / "statistics_extractor"))
-
-from handler import (
+from statistics_extractor.handler import (
     generate_column_names,
     find_number_of_columns,
     get_statistics,
