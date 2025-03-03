@@ -1,7 +1,7 @@
-from handler import handle_extraction
 from typing import Union
 import numpy as np
 import pandas as pd
+from .handler import handle_extraction
 
 
 def extract_statistics(

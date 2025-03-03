@@ -1,4 +1,9 @@
-from statistics_functions import (
+import sys
+import numpy as np
+import pandas as pd
+from typing import Union
+from .utils import pd_to_np
+from .statistics_functions import (
     calculate_mean,
     calculate_median,
     calculate_mode,
@@ -9,11 +14,6 @@ from statistics_functions import (
     calculate_skewness,
     calculate_kurtosis,
 )
-from utils import pd_to_np
-import sys
-import numpy as np
-import pandas as pd
-from typing import Union
 
 
 STATISTICS_NAMES = [

@@ -1,12 +1,7 @@
-import sys
-from pathlib import Path
 import numpy as np
 import pandas as pd
 import pytest
-
-sys.path.append(str(Path(__file__).parent.parent / "statistics_extractor"))
-
-from extractor import extract_statistics
+from statistics_extractor.extractor import extract_statistics
 
 
 # test extract_statistics

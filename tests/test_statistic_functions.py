@@ -1,12 +1,7 @@
-import sys
-from pathlib import Path
 import numpy as np
 from scipy.stats import mode, skew, kurtosis
 from scipy.stats._stats_py import ModeResult
-
-sys.path.append(str(Path(__file__).parent.parent / "statistics_extractor"))
-
-from statistics_functions import (
+from statistics_extractor.statistics_functions import (
     calculate_mean,
     calculate_median,
     calculate_mode,
